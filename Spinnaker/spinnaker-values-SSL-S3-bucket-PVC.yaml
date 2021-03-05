@@ -1,5 +1,5 @@
 halyard:
-  spinnakerVersion: 1.22.1
+  spinnakerVersion: 1.19.4
   image:
     repository: gcr.io/spinnaker-marketplace/halyard
     tag: 1.32.0
@@ -213,7 +213,7 @@ kubeConfig:
 ingress:
   enabled: true
   certManager: true
-  host: spinnaker-test.getswift-testing.co
+  host: spinnaker-ogy.getswift-testing.co
   annotations:
     kubernetes.io/ingress.class : "nginx" 
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -224,11 +224,11 @@ ingress:
   tls:
     - secretName: spinnaker-tls
       hosts:
-        - spinnaker-test.getswift-testing.co
+        - spinnaker-ogy.getswift-testing.co
 
 ingressGate:
   enabled: true
-  host: spinnaker-gate-test.getswift-testing.co
+  host: spinnaker-gate-ogy.getswift-testing.co
   annotations:
     kubernetes.io/ingress.class : "nginx" 
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -239,7 +239,7 @@ ingressGate:
   tls:
     - secretName: spinnaker-gate-tls
       hosts:
-        - spinnaker-gate-test.getswift-testing.co
+        - spinnaker-gate-ogy.getswift-testing.co
 
 # spinnakerFeatureFlags is a list of Spinnaker feature flags to enable
 # Ref: https://www.spinnaker.io/reference/halyard/commands/#hal-config-features-edit
@@ -309,12 +309,12 @@ gcs:
 # AWS Simple Storage Service
 s3:
   enabled: true
-  bucket: "dv-k8s-kops-test"
+  bucket: "ogy-kops-test"
   rootFolder: "front50"
   region: "eu-west-3"
   # endpoint: ""
-  accessKey: "AKIAWAP5JOOKC7C4LAIF"
-  secretKey: "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"
+  accessKey: "AKIAWAP5JOOKKPMCUVEO"
+  secretKey: "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"
   # assumeRole: "<role to assume>"
   ## Here you can pass extra arguments to configure s3 storage options
   extraArgs: []
