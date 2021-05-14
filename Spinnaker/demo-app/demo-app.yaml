@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app-deployment
+  name: demo-app-ogy-test
   labels:
     app: demo-app
 spec:
@@ -40,6 +40,6 @@ spec:
     app: demo-app
   type: LoadBalancer
 
-### TEST COMMIT 2
+### TEST COMMIT 3
 
 
